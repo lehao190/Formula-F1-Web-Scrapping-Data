@@ -22,6 +22,9 @@ export class Race {
   
   @Prop()
   date: string;
+
+  @Prop()
+  year: number;
 }
 
 export const RaceSchema = SchemaFactory.createForClass(Race);

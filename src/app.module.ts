@@ -1,15 +1,11 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Race, RaceSchema } from './schemas/race.schema';
+import { RacesModule } from './races/races.module';
 
 @Module({
   imports: [
     MongooseModule.forRoot('mongodb://localhost/formula1'),
-    MongooseModule.forFeature([{ name: Race.name, schema: RaceSchema }])
-  ],
-  controllers: [AppController],
-  providers: [AppService],
+    RacesModule
+  ]
 })
 export class AppModule {}
