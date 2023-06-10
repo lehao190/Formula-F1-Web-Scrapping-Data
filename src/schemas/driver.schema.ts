@@ -19,6 +19,9 @@ export class Driver {
   
   @Prop()
   pts: number;
+
+  @Prop()
+  year: number;
 }
 
 export const DriverSchema = SchemaFactory.createForClass(Driver);
