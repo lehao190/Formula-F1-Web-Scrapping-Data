@@ -13,6 +13,9 @@ export class Team {
   
   @Prop()
   pts: number;
+
+  @Prop()
+  year: number;
 }
 
 export const TeamSchema = SchemaFactory.createForClass(Team);
